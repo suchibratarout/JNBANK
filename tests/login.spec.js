@@ -8,6 +8,7 @@ await page.goto('https://portal.jnbank.co.uk/')
 // const title = await page.title();
 //   Print the title in console
 // console.log('Page Title is:', title);
+//hello
 
 await expect(page).toHaveTitle('JN Bank UK | Savings & Personal Loans For UK Customers')
 
