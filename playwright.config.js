@@ -1,6 +1,5 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
-import { channel } from 'node:diagnostics_channel';
 
 /**
  * Read environment variables from file.
@@ -35,46 +34,21 @@ export default defineConfig({
   },
 
   /* Configure projects for major browsers */
-  // projects: [
-  //   {
-  //     name: 'chromium',
-  //     use: { ...devices['Desktop Chrome'] },
-  //   },
-
-  //   {
-  //     name: 'firefox',
-  //     use: { ...devices['Desktop Firefox'] },
-  //   },
-
-  //   {
-  //     name: 'webkit',
-  //     use: { ...devices['Desktop Safari'] },
-  //   },
-
-
-projects: [
+  projects: [
     {
-      name: 'Goggle Chrome',
-      use: { 
-        channel: 'Chrome',// run in Actual Google chrome installed in your system
-    },
-  },
-
-    {
-      name: 'Microsoft Edge',
-      use: {
-        channel: 'msedge',
-    },
-  },
-
-    {
-      name: 'Firefox',
-      use: { ...devices['Desktop Firefox'] },
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
     },
 
-    
-  
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
 
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
 
     /* Test against mobile viewports. */
     // {
